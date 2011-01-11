@@ -20,12 +20,12 @@ import net.spy.memcached.MemcachedClientIF;
 
 import com.google.inject.Binder;
 import com.google.inject.Module;
+import com.google.inject.Singleton;
 
 import de.cosmocode.palava.ipc.Current;
-import de.cosmocode.palava.ipc.IpcConnectionScoped;
 
 /**
- * Binds Memcache related implementations. 
+ * Binds {@link MemcachedClientIF} to {@link MemcacheClientProvider}.
  * 
  * @author Tobias Sarnowski
  */
@@ -34,7 +34,7 @@ public final class MemcacheClientModule implements Module {
     @Override
     public void configure(Binder binder) {
         binder.bind(MemcachedClientIF.class).annotatedWith(Current.class).
-            toProvider(MemcacheClientProvider.class).in(IpcConnectionScoped.class);
+            toProvider(MemcacheClientProvider.class).in(Singleton.class);
     }
     
 }
