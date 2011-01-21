@@ -12,7 +12,6 @@
     <groupId>de.cosmocode.palava</groupId>
     <artifactId>palava-memcache</artifactId>
     <name>Palava Memcache</name>
-
     <scm>
         <developerConnection>scm:git:git@github.com:palava/${project.artifactId}.git</developerConnection>
     </scm>
@@ -32,7 +31,6 @@
             </snapshots>
         </repository>
     </repositories>
-
     <dependencies>
         <dependency>
             <groupId>spy</groupId>
@@ -61,5 +59,4 @@
             <version>[1.2,2)</version>
         </dependency>
     </dependencies>
-    
 </project>
